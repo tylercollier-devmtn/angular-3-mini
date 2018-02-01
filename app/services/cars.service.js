@@ -23,11 +23,16 @@ angular.module('fourWheels').service('carsSrvc', function( $http ) {
     },
   ];
 
+  this.getCars = function() {
+    return this.cars.slice();
+  }
+
   this.buyCar = function( id ) {
     const carIndex = this.cars.findIndex( car => car.id === id );
 
     if ( carIndex !== -1 ) {
       this.cars.splice( carIndex, 1 );
     }
+    console.log('this.cars service', this.cars);
   };
 });

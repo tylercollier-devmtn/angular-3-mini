@@ -6,15 +6,17 @@
       <div class="footer__input-container">
         <div class="footer__input-header open-sans">Name: </div>
         <!-- Name Input Here -->
+        <input class="footer__input" ng-model="footerCtrl.name">
       </div>
-  
+      
       <div class="footer__input-container">
         <div class="footer__input-header open-sans">Email: </div>
         <!-- Email Input Here -->
+        <input class="footer__input" ng-model="footerCtrl.email">
       </div>
   
-      <button class="footer__btn-contact open-sans" ng-click="">Contact!</button>
-      <p class="footer__confirmation open-sans" ng-if="">We'll send you an email soon, thanks!</p>
+      <button class="footer__btn-contact open-sans" ng-click="footerCtrl.contact()">Contact!</button>
+      <p class="footer__confirmation open-sans" ng-if="footerCtrl.contacted">We'll send you an email soon, thanks!</p>
     </div>
   </div>
 </div>

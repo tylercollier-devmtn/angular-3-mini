@@ -2,12 +2,13 @@
   <div class="cars__child">
     <h1 class="alfa-slab-one">Car Listings</h1>
 
-    <div class="car__container" ng-repeat="">
+    <div class="car__container" ng-repeat="car in carsCtrl.cars">
       <div class="car__container-left">
         <div class="car__attribute">
           <span class="car__attribute-header open-sans">Make:</span>
           <div class="car__attribute-value merri-sans">
             <!-- Car Make Here -->
+            {{car.make}}
           </div>
         </div>
 
@@ -17,6 +18,7 @@
           <span class="car__attribute-header open-sans">Color:</span>
           <div class="car__attribute-value merri-sans">
             <!-- Car Color Here -->
+            {{car.color}}
           </div>
         </div>
 
@@ -27,6 +29,7 @@
           <span class="car__attribute-header open-sans">Model:</span>
           <div class="car__attribute-value merri-sans">
             <!-- Car Model Here -->
+            {{car.model}}
           </div>
         </div>
 
@@ -36,12 +39,13 @@
           <span class="car__attribute-header open-sans mr">Year:</span>
           <div class="car__attribute-value merri-sans">
             <!-- Car Year Here -->
+            {{car.year}}
           </div>
         </div>
       </div>
 
       <div class="car__container-right">
-        <button class="alfa-slab-one" ng-click="">BUY</button>
+        <button class="alfa-slab-one" ng-click="carsCtrl.buyCar(car.id)">BUY</button>
       </div>
     </div>
   </div>
